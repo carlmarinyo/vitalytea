@@ -50,7 +50,8 @@
             <div id="selections">
                 <button class="menu-btn" data-category="Warm Drinks">Warm</button><hr>
                 <button class="menu-btn" data-category="Cold Drinks">Cold</button><hr>
-                <button class="menu-btn" data-category="Sandwiches">Sandwiches</button>
+                <button class="menu-btn" data-category="Sandwiches">Sandwiches</button><hr>
+                <button class="menu-btn" data-category="Services">Services</button>
             </div>
             <div class="menuchoice">
                 <h2>Warm Drinks</h2>
@@ -269,7 +270,108 @@
                         </div>
                     </div>
                 </div><!--SANDIWHICESS-->
-            </div><!--MENUUU GRID-->
+                <!-- Services -->
+                <div class="itemss" id="Services">
+                    <!-- Digital Printing Order -->
+                    <div class="digital-printing">
+                        <h2>Digital Printing Order</h2>
+
+                        <div class="printing-container">
+                            <div class="column">
+                                <label for="paperStock">Choose Paper Type:</label>
+                                <select id="paperStock">
+                                    <option value="" disabled selected>Select Paper Type</option>
+                                    <option value="Glossy" data-price="2.50">Glossy Paper - ₱2.50 per page</option>
+                                    <option value="Matte" data-price="2.00">Matte Paper - ₱2.00 per page</option>
+                                    <option value="Textured" data-price="1.50">Textured Paper - ₱1.50 per page</option>
+                                </select>
+
+                                <label for="inkBrand">Choose Ink Brand:</label>
+                                <select id="inkBrand">
+                                    <option value="" disabled selected>Select Ink Brand</option>
+                                    <option value="Hewlett Packard" data-multiplier="1.0">Hewlett Packard</option>
+                                    <option value="Epson" data-multiplier="1.25">Epson (+25%)</option>
+                                    <option value="Canon" data-multiplier="1.5">Canon (+50%)</option>
+                                </select>
+                            </div>
+
+                            <div class="column">
+                                <label for="fileUpload">Upload File:</label>
+                                <input type="file" id="fileUpload">
+
+                                <label for="numPages">Number of Pages:</label>
+                                <input type="number" id="numPages" min="1" value="1">
+
+                                <p>Total Price: <span id="totalPrice">₱0.00</span></p>
+                                <button onclick="addDigitalPrintingToCart()">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Laminating Service -->
+                    <div class="digital-printing">
+                        <h2>Laminating Service</h2>
+
+                        <div class="printing-container">
+                            <div class="column">
+                                <label for="laminateFile">Upload File:</label>
+                                <input type="file" id="laminateFile">
+                            </div>
+
+                            <div class="column">
+                                <p>Total Price: <span id="laminatePrice">₱50.00</span></p>
+                                <button onclick="addLaminatingToCart()">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Binding Service -->
+                    <div class="digital-printing">
+                        <h2>Binding Service</h2>
+
+                        <div class="printing-container">
+                            <div class="column">
+                                <label for="bindingType">Choose Binding Type:</label>
+                                <select id="bindingType">
+                                    <option value="" disabled selected>Select Binding Type</option>
+                                    <option value="Saddle Stitch" data-price="25.00">Saddle Stitch - ₱25.00</option>
+                                    <option value="Heated Spine" data-price="30.00">Heated Spine - ₱30.00</option>
+                                    <option value="Wire" data-price="35.00">Wire - ₱35.00</option>
+                                </select>
+                            </div>
+
+                            <div class="column">
+                                <label for="bindingFile">Upload File:</label>
+                                <input type="file" id="bindingFile">
+
+                                <p>Total Price: <span id="bindingPrice">₱0.00</span></p>
+                                <button onclick="addBindingToCart()">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cutting Service -->
+                    <div class="digital-printing">
+                        <h2>Cutting Service</h2>
+
+                        <div class="printing-container">
+                            <div class="column">
+                                <label for="cuttingFile">Upload File:</label>
+                                <input type="file" id="cuttingFile">
+                            </div>
+
+                            <div class="column">
+                                <p>Total Price: <span id="cuttingPrice">₱5.00</span></p>
+                                <button onclick="addCuttingToCart()">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+    </div>
+    </div><!--MENUUU GRID-->
         
         </section>
 
