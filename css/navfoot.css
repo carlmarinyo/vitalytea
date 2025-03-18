@@ -58,7 +58,10 @@ nav {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
     /*height: 60px;*/
 }
-
+ul img {
+    margin-left: 25px;
+    padding: 5px;
+}
 nav ul {
     width: 100%;
     display: flex;
@@ -207,7 +210,9 @@ footer {
     margin-bottom: 5px;
     color: #DED6CB;
 }
-
+.links li a:hover {
+    color: #B0843F;
+}
 .contact {
     flex: 1;
 }
