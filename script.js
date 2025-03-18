@@ -86,6 +86,13 @@ function addToCart(item, price, category = "default") {
     }
 
     updateCart();
+    showOrderSummary(); // Show the order summary when an item is added
+}
+
+function showOrderSummary() {
+    const orderSummary = document.querySelector('.order-summary');
+    orderSummary.style.display = 'block'; // Ensure the order summary is visible
+    orderSummary.scrollIntoView({ behavior: 'smooth' }); // Smoothly scroll to the order summary
 }
 
 //Digital Printing Service Function
@@ -172,6 +179,7 @@ function updateCart() {
     let cartList = document.getElementById("cart-items");
     let totalElement = document.getElementById("total");
     let cartContainer = document.getElementById("cart-container");
+    const orderSummary = document.querySelector('.order-summary');
 
     cartList.innerHTML = "";
     let total = 0;
@@ -186,16 +194,23 @@ function updateCart() {
 
     totalElement.textContent = total.toFixed(2);
     cartContainer.style.display = cart.length > 0 ? "block" : "none";
+
+    // Hide the order summary if the cart is empty
+    if (cart.length === 0) {
+        orderSummary.style.display = 'none';
+    }
 }
 
 // ✅ Checkout Function
 function checkout() {
+    if (cart.length === 0) {
+        alert("Your cart is empty. Please add items before proceeding to checkout.");
+        return; // Prevent navigation if the cart is empty
+    }
+
     localStorage.setItem('cart', JSON.stringify(cart));
     window.location.href = '../html/order.html';
 }
-
-
-
 // Services Section Functionality
 document.addEventListener("DOMContentLoaded", function () {
     const serviceData = {

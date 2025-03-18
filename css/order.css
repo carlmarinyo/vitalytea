@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 2%;
+}
+
 button {
     padding: 10px 20px;
     background-color: #4CAF50;
@@ -43,6 +51,23 @@ button:hover {
 #confirmation-section {
     padding: 20px;
     border-radius: 8px;
+}
+
+
+.cancel-button {
+    width: 100%; /* Make button full width */
+    padding: 12px 20px;
+    margin-top: 20px;
+    background-color: rgb(231, 44, 44);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cancel-button:hover {
+    background-color: rgb(200, 30, 30);
 }
 
 .confirmation-details, .confirmation-order {
@@ -116,16 +141,24 @@ button:hover {
     cursor: pointer;
 }
 
+
+
 .order-summary, .customer-form {
-    padding: 20px;
-    margin: 25px auto; /* Added top margin for spacing */
-    width: 90%;
-    max-width: 500px;
-    background: rgba(255, 255, 255, 0.5);
-    border: 1px solid rgb(0, 0, 0);
+    width: 80%;
+    max-width: 350px;
+    height: auto; /* Allow height to adjust naturally */
+    max-height: 400px; /* Limit max height */
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid black;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 10px;
     text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.order-summary #order-items{
+    min-height: 54%;
 }
 
 .customer-form input {
@@ -151,4 +184,16 @@ button:hover {
 
 .customer-form button:hover {
     background-color: #45a049;
+}
+
+@media (max-width: 756px){
+    main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .order-summary #order-items{
+        min-height: 0%;
+    }
 }

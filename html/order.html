@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order - Vitaly Tea</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/order.css">
+    <link rel="stylesheet" href="../css/navfoot.css">
     <link rel="stylesheet" href="../css/loading.css">
+    <link rel="stylesheet" href="../css/order.css">
 </head>
-<body>
+<body> 
     <div id="loading-screen">
         <div class="loader-container">
             <div class="rotating-container">
@@ -25,21 +25,25 @@
         <ul class="sidebar">
             <li onclick="hideSidebar()"><a href="#">✖</a></li>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="../html/about.html">About</a></li>
+            
             <li><a href="../html/services.html">Services</a></li>
             <li><a href="../html/menu.html">Menu</a></li>
-            <li><a href="../html/contact.html">Contact</a></li>
             <li><a href="../html/order.html">Order</a></li>
+            <li><a href="../html/about.html">About</a></li>
+            <li><a href="../html/contact.html">Contact</a></li>
+            <li><a href="../html/credits.html">Credits</a></li>
         </ul>
     
         <ul>
-            <li><a href="#"><img src="Picture/Logo.png" alt="">Vitaly Tea</a></li>
+            <li><a><img src="/Picture/Logo.png" alt=""></a></li>
             <li class="hideOnMobile"><a href="../index.html">Home</a></li>
-            <li class="hideOnMobile"><a href="../html/about.html">About</a></li>
+            
             <li class="hideOnMobile"><a href="../html/services.html">Services</a></li>
             <li class="hideOnMobile"><a href="../html/menu.html">Menu</a></li>
-            <li class="hideOnMobile"><a href="../html/contact.html">Contact</a></li>
             <li class="hideOnMobile"><a href="../html/order.html">Order</a></li>
+            <li class="hideOnMobile"><a href="../html/about.html">About</a></li>
+            <li class="hideOnMobile"><a href="../html/contact.html">Contact</a></li>
+            <li class="hideOnMobile"><a href="../html/credits.html">Credits</a></li>
             <li class="menuButton" onclick="showSidebar()"><a href="#">☰</a></li>
         </ul>
     </nav>
@@ -47,8 +51,9 @@
         <section class="order-summary">
             <h2>Order Details</h2>
             <ul id="order-items">
-                </ul>
+            </ul>
             <p>Total: ₱<span id="order-total">0.00</span></p>
+            <button class="cancel-button" onclick="cancelOrder()">Cancel Order</button>
         </section>
 
         <section class="customer-form">

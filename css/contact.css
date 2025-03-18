@@ -6,14 +6,62 @@
 }
 
 #contactMain{
-    padding-top: 50px;
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
 
+#contactDetails{
+    border: 1px solid rgb(32, 29, 21);
+    margin: 2%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: rgb(255, 255, 255);
     
 }
+
+#contactContainer{
+    padding-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+span {
+    color: #B0843F;
+    border: none;
+    text-shadow: 1px 1px 2px black;
+}
+#contactContainer p span {
+    text-shadow: 0.5px 0.5px 2px black;
+    font-weight: bolder;
+}
+
+#map{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 50%;
+    border-radius: 50px;
+    border: 1px solid rgb(54, 48, 48);
+    overflow: hidden;
+}
+
+#map iframe{
+    flex: 1;
+    height: 100%;
+    border-radius: 50px;
+    
+}
+
 
 #inquiry{
     color: rgb(32, 29, 21);
@@ -100,63 +148,17 @@ form textarea::placeholder{
 }
 
 button{
+    border-radius: 10px;
     flex-shrink: 1;
     background-color: #ff9800;
+    padding: 2%;
 }
 
 button:hover{
     background-color: #e68900;
 }
 
-#contactDetails{
-    border: 1px solid rgb(32, 29, 21);
-    margin: 2%;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    flex-shrink: 1;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    color: rgb(255, 255, 255);
-    
-}
 
-#contactContainer{
-    padding: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-}
- span {
-    color: #B0843F;
-    border: none;
-    text-shadow: 1px 1px black;
-}
-#contactContainer p span {
-    text-shadow: 0.5px 0.5px black;
-    font-weight: bolder;
-}
-
-#map{
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    height: 50%;
-    border-radius: 50px;
-    border: 1px solid rgb(54, 48, 48);
-    overflow: hidden;
-}
-
-#map iframe{
-    flex: 1;
-    height: 100%;
-    border-radius: 50px;
-    
-}
 
 
 @media (max-width: 750px){

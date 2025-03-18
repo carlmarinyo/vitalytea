@@ -1,138 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #5a4231;
-    border-radius: 5px;
-    border: 1px solid #272625; /* Outline effect */
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #4d3629; /* Darker brown when hovered */
-}
-
-::-webkit-scrollbar-track {
-    background: #f5f3f0; /* Nude background */
-}
-
-
-html,
-body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-}
-nav img {
-    width: 50px;
-    height: auto;
-    margin-left: 100px;
-    
-
-}
-body {
-    min-height: 100vh;
-    background-image: url(../Picture/bg3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    font-family: poppins, sans-serif;
-}
-
-main {
-    flex: 1;
-
-    background-size: cover;
-    background-position: center;
-}
-
-nav {
-    position: absolute;
-    width: 100%;
-    z-index: 40;
-    background-color: #B0843F;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-
-}
-
-nav ul {
-    
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-nav li {
-    height: 50px;
-}
-
-nav a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    padding: 0 30px;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    transition: 0.5s;
-}
-
-nav a:hover {
-    background-color: #f1f1f1;
-    border-bottom: 1px solid #B0843F;
-    transform: translateY(-5px);
-}
-
-nav a:active{
-    transform: scale(1.1);
-    background:rgb(146, 103, 63);
-}
-
-nav li:first-child {
-    margin-right: auto;
-}
-
-.menuButton {
-    display: none;
-}
-
-.sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    z-index: 999;
-    backdrop-filter: blur(10px);
-    background-color: rgba(146, 103, 63,0.8);
-    box-shadow: 10 0 10px rgba(0, 0, 0, 0.1) 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    transition: all 0.3s ease;
-    display: none;
-    align-items: flex-end;
-}
-
-.sidebar li {
-    width: 100%;
-}
-
-.sidebar a {
-    width: 100%;
-}
 
 /* ------------------------------------ */
 /* Hero Section Styles                  */
@@ -145,14 +10,12 @@ nav li:first-child {
     justify-content: flex-start;
     height: 80vh;
     padding-left: 5%;
-    
 }
 
 .hero-text {
-    max-width: 700px;
     color: rgb(253, 253, 253);
     text-align: left;
-    
+    width: 800px;
 }
 
 .hero-text h1 {
@@ -160,7 +23,7 @@ nav li:first-child {
     font-weight: 800;
     margin-bottom: 10px;
     color: #B0843F;
-    text-shadow:2px 2px #000000  ;
+    text-shadow:2px 2px 5px #000000  ;
     
 }
 
@@ -168,12 +31,12 @@ nav li:first-child {
     font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: 20px;
-    max-width: 570px;
+    max-width: 800px;
     
 }
 
 .hero-text button {
-    background: #B0843F;
+    background: transparent;
     color: rgb(255, 255, 255);
     border: 1px solid black;
     padding: 12px 24px;
@@ -185,31 +48,18 @@ nav li:first-child {
 }
 
 .hero-text button:hover {
-    background-color: #5a4231;
-    color: #B0843F;
+    background-color: #e77523;
+    color: #ffffff;
   
 }
 
-a:hover {
-    color: #B0843F;
-   
-}
 
 
-.box .links li a:hover {
-    background-color: pink;
+
+.box .links li a:hover { /*para san to?*/
+    background-color: rgb(202, 0, 34);
 }
 
-span {
-   
-    color: #5a4231;
-    border-bottom: 1px solid #B0843F;
- 
-}
-
-footer span {
-    color: #B0843F;
-}
 
 #header{
     flex-shrink: 1;
@@ -286,159 +136,12 @@ footer span {
     height: 100%;
 }
 
-footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(22, 22, 22, 1);
-    color: #DED6CB;
-    text-align: center;
-    padding: 5px 0;
-    font-size: 0.9rem;
-}
-
-.footer-container {
-    flex-wrap: wrap;
-    display: flex;
-    width: 90%;
-    margin: 0 auto;
-    justify-content: space-between;
-}
-
-.box {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 25px;
-}
-
-.box img {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-}
-
-
-.logo {
-  flex: 1;
-}
-
-.logo img {
-    width: 100%;
-    max-width: 50px;
-    height: auto;
-   
-
-}
-
-.about {
-    flex: 1;
-}
-
-.links {
-    flex: 1;
-}
-
-.links li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.links li a {
-    padding: 0 5%;
-    margin-bottom: 5px;
-    color: #DED6CB;
-}
-
-.contact {
-    flex: 1;
-}
-
-.footer-container h1 {
-    color: #B0843F;
-}
-
-.footer-container p{
-    color: #DED6CB;
-}
 @media screen and (max-width: 768px) {
-    nav img {
-        margin-left: 10px;
-    }
-    .teams-container {
-        flex-direction: column;
-        align-items: center;
-    }
 
     .about-title {
         font-size: 2em;
     }
-
-    /* for footer */
-    footer {
-        position: relative;
-    }
-    .box img {
-        min-width: 120px;
-        height: auto;
-    }
-    .footer-container {
- 
-        align-items: center;
-    }
-
-    footer p {
-        font-size: 1em;
-
-        }
-
-    .box li a {
-        font-size: 1.2em;
-        gap
-    }
-   .links {
-        width: 100%;
-    }
-    .links li {
-        gap: 50px;
-    }
-    /* end footer */
-
-    
-
-
-
-    .about-content {
-        flex-direction: column;
-        padding: 50px;
-      
-    }
-
-    .about-content img {
-        order: -1;
-        width: 100%;
-        height: 100%;
-    }
-
-    .about-content p {
-        font-size: 1.3em;
-        flex: 1;
-        text-align: center;
-    }
-
-    .about-information h1 {
-        font-size: 2.5em;
-    }
-
-    .hideOnMobile {
-        display: none;
-    }
-
-    .menuButton {
-        display: block;
-    }
-
+   
     body {
         background-image: url(../Picture/bg3.jpg);
         background-size: cover;
@@ -491,24 +194,5 @@ footer {
     .hero-text p {
         font-size: 1rem;
     }
-
-    .footer-container {
-        flex-direction: column;
-    }
-
-    .logo {
-        margin-right: 0;
-    }
-
-    .logo img {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .sidebar {
-        width: 100%;
-    }
-
 
 }
