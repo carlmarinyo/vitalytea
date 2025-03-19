@@ -201,7 +201,7 @@ function updateCart() {
     }
 }
 
-// ✅ Checkout Function
+//Checkout Function
 function checkout() {
     if (cart.length === 0) {
         alert("Your cart is empty. Please add items before proceeding to checkout.");
@@ -212,7 +212,6 @@ function checkout() {
     window.location.href = '../html/order.html';
 }
 // Services Section Functionality
-// Services Section Functionality
 document.addEventListener("DOMContentLoaded", function () {
     const serviceData = {
         "digital-printing": {
@@ -220,7 +219,10 @@ document.addEventListener("DOMContentLoaded", function () {
             images: [
                 { src: "../Picture/Glossy_Print.jpg", text: "Glossy Print" },
                 { src: "../Picture/Matte_Print.jpg", text: "Matte Print" },
-                { src: "../Picture/Textured_Print.jpg", text: "Textured Print" }
+                { src: "../Picture/Textured_Print.jpg", text: "Textured Print" },
+                { src: "../Picture/HP.png", text: "Hewlett Packard" },
+                { src: "../Picture/Epson-logo.png", text: "Epson" },
+                { src: "../Picture/Canon-logo.png", text: "Canon" }
             ],
             desc: `<h3>Digital Printing</h3>
                    <h4>Paper Stock</h4>
@@ -228,7 +230,14 @@ document.addEventListener("DOMContentLoaded", function () {
                        <li><strong>Glossy:</strong> Provides a shiny, reflective finish, enhancing color vibrancy and contrast.</li>
                        <li><strong>Matte:</strong> Offers a non-reflective, smooth surface, reducing glare.</li>
                        <li><strong>Textured:</strong> Adds a unique, tactile feel, perfect for invitations.</li>
-                   </ul>`
+                   </ul>
+                   <h4>Ink</h4>Another important element of printing  is  ink. We will guarantee that our ink does not run, smear, blotch. It also does not stick to other printed pages unlike the result in other digital printing presses.
+                   <h4>Our Brands:</h4>
+                   <ul>
+                       <li><strong>Hewlett Packard: </strong>Known for reliable, high-quality ink that delivers sharp text and vibrant colors, ideal for both home and office printing.</li>
+                       <li><strong>Epson: </strong>Features advanced pigment and dye-based inks designed for long-lasting prints with rich color depth, often used for photography and professional documents.</li>
+                       <li><strong>Canon: </strong>Offers specialized ink technology for crisp text and true-to-life colors, making it a favorite for photo printing and creative projects.</li>
+                   </ul>`      
         },
         "binding": {
             title: "Binding",
