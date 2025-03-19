@@ -212,14 +212,15 @@ function checkout() {
     window.location.href = '../html/order.html';
 }
 // Services Section Functionality
+// Services Section Functionality
 document.addEventListener("DOMContentLoaded", function () {
     const serviceData = {
         "digital-printing": {
             title: "Digital Printing",
             images: [
-                { src: "../Picture/Digital-Printing.png", text: "Glossy Print" },
-                { src: "../Picture/Digital-Printing.png", text: "Matte Print" },
-                { src: "../Picture/Digital-Printing.png", text: "Textured Print" }
+                { src: "../Picture/Glossy_Print.jpg", text: "Glossy Print" },
+                { src: "../Picture/Matte_Print.jpg", text: "Matte Print" },
+                { src: "../Picture/Textured_Print.jpg", text: "Textured Print" }
             ],
             desc: `<h3>Digital Printing</h3>
                    <h4>Paper Stock</h4>
@@ -232,9 +233,9 @@ document.addEventListener("DOMContentLoaded", function () {
         "binding": {
             title: "Binding",
             images: [
-                { src: "../Picture/Binding.jpeg", text: "Saddle Stitch" },
-                { src: "../Picture/Binding.jpeg", text: "Heated Spine" },
-                { src: "../Picture/Binding.jpeg", text: "Wire Binding" }
+                { src: "../Picture/Saddle.jpg", text: "Saddle Stitch" },
+                { src: "../Picture/Heated_Spine.jpg", text: "Heated Spine" },
+                { src: "../Picture/wire.jpg", text: "Wire Binding" }
             ],
             desc: `<h3>Binding</h3>
                    <p>Our professional binding services ensure that your documents are securely fastened.</p>`
@@ -242,9 +243,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "laminating": {
             title: "Laminating",
             images: [
-                { src: "../Picture/Laminate1.jpg", text: "Glossy Lamination" },
-                { src: "../Picture/Laminate2.jpg", text: "Matte Lamination" },
-                { src: "../Picture/Laminate3.jpg", text: "Textured Lamination" }
+                { src: "../Picture/Laminating.jpg", text: "Lamination" },
             ],
             desc: `<h3>Laminating</h3>
                    <p>Protect and enhance your documents with high-quality lamination.</p>`
@@ -252,9 +251,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "cutting": {
             title: "Cutting",
             images: [
-                { src: "../Picture/Cut1.jpg", text: "Precision Cutting" },
-                { src: "../Picture/Cut2.jpg", text: "Custom Shapes" },
-                { src: "../Picture/Cut3.jpg", text: "Bulk Cutting" }
+                { src: "../Picture/Cutting.jpg", text: "Cutting" },
             ],
             desc: `<h3>Cutting</h3>
                    <p>Our precision cutting services ensure clean, sharp edges.</p>`
