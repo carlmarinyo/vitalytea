@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 { src: "../Picture/Matte_Print.jpg", text: "Matte Print" },
                 { src: "../Picture/Textured_Print.jpg", text: "Textured Print" },
                 { src: "../Picture/HP.png", text: "Hewlett Packard" },
-                { src: "../Picture/Epson-logo.png", text: "Epson" },
+                { src: "../Picture/epson-logo.png", text: "Epson" },
                 { src: "../Picture/Canon-logo.png", text: "Canon" }
             ],
             desc: `<h3>Digital Printing</h3>
