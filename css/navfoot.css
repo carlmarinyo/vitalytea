@@ -15,7 +15,7 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: #f5f3f0; /* Nude background */
+    background: transparent; /* Nude background */
 }
 
 
@@ -57,6 +57,8 @@ nav {
     background-color: #f8f6f3;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
     /*height: 60px;*/
+    position: fixed;
+    z-index: 40;
 }
 ul img {
     margin-left: 25px;

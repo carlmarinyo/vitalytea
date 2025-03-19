@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 { src: "../Picture/epson-logo.png", text: "Epson" },
                 { src: "../Picture/Canon-logo.png", text: "Canon" }
             ],
-            desc: `<h3>Digital Printing</h3>
+            desc: `
                    <h4>Paper Stock</h4>
                    <ul>
                        <li><strong>Glossy:</strong> Provides a shiny, reflective finish, enhancing color vibrancy and contrast.</li>
@@ -246,15 +246,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 { src: "../Picture/Heated_Spine.jpg", text: "Heated Spine" },
                 { src: "../Picture/wire.jpg", text: "Wire Binding" }
             ],
-            desc: `<h3>Binding</h3>
-                   <p>Our professional binding services ensure that your documents are securely fastened.</p>`
+            desc: `
+                   <p>Our professional binding services ensure that your documents are securely fastened.</p>
+                   <ul>
+                       <li><strong>Saddle Stitch:</strong> Folded sheets stapled along the spine.</li>
+                       <li><strong>Heated Spine:</strong> Spine glued with heat for binding.</li>
+                       <li><strong>Wire:</strong> Bound with metal wire loops or coils.</li>
+                   </ul>`
         },
         "laminating": {
             title: "Laminating",
             images: [
                 { src: "../Picture/Laminating.jpg", text: "Lamination" },
             ],
-            desc: `<h3>Laminating</h3>
+            desc: `
                    <p>Protect and enhance your documents with high-quality lamination.</p>`
         },
         "cutting": {
@@ -262,7 +267,7 @@ document.addEventListener("DOMContentLoaded", function () {
             images: [
                 { src: "../Picture/Cutting.jpg", text: "Cutting" },
             ],
-            desc: `<h3>Cutting</h3>
+            desc: `
                    <p>Our precision cutting services ensure clean, sharp edges.</p>`
         }
     };
@@ -351,4 +356,18 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 500);
         }
     });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const aboutSections = document.querySelectorAll(".about-content");
+    if (aboutSections.length > 0) {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+        });
+    }, { threshold: 0.1 });
+    aboutSections.forEach(section => observer.observe(section));
+}
 });
